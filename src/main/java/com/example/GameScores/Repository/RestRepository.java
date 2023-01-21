@@ -6,3 +6,5 @@ public interface RestRepository extends CrudRepository<user, Integer> {
 
 }
 
+
+

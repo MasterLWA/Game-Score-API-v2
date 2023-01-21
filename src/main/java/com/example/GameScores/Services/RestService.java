@@ -14,12 +14,25 @@ public class RestService {
     private RestRepositoryGame restRepositoryGame;
 
 
-
-    public user addUser(user User){
+    public user addUser(user User) {
         return restRepository.save(User);
     }
 
-    public game addGame(game Game){
+    public game addGame(game Game) {
         return restRepositoryGame.save(Game);
     }
+
+    public Iterable<user> findAll() {
+        return restRepository.findAll();
+    }
+
+    public user findUserById(Integer id) {
+        return restRepository.findById(id).get();
+    }
+
+    public void deleteUserById(user User) {
+        restRepository.delete(User);
+    }
 }
+
+

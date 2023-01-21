@@ -30,15 +30,15 @@ public class user{
         this.username = username;
     }
 
-    public String getname() {
+    public String getUsername() {
         return username;
     }
 
-    public void setDescription(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getDescription() {
+    public String getEmail() {
         return email;
     }
 

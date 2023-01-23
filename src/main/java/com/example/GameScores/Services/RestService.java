@@ -13,23 +13,27 @@ public class RestService {
     @Autowired
     private RestRepositoryGame restRepositoryGame;
 
-
+    //add new user
     public user addUser(user User) {
         return restRepository.save(User);
     }
-
+    
+    //add new game
     public game addGame(game Game) {
         return restRepositoryGame.save(Game);
     }
-
+    
+    //get all user records from database
     public Iterable<user> findAll() {
         return restRepository.findAll();
     }
-
+    
+    //find user's record by id 
     public user findUserById(Integer id) {
         return restRepository.findById(id).get();
     }
-
+    
+    //Delete user by id
     public void deleteUserById(user User) {
         restRepository.delete(User);
     }
